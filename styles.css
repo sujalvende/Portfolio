@@ -1,0 +1,173 @@
+
+@font-face {
+  font-family: "Nippo";
+  src: url("fonts/Nippo-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Stardom";
+  src: url("fonts/Stardom-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DancingScript";
+  src: url("fonts/DancingScript-Regular.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cursor */
+
+#cursor {
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+}
+
+/* Nav Bar Section */
+
+#nav-bar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40vw;
+}
+
+#logo {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #FFD700;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10vw;
+  height: 100%;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #AEEBFF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  border-bottom: 1px solid #FFD700;
+  cursor: pointer;
+}
+
+/* Hero Section */
+
+#hero-section {
+  height: 100vh;
+  width: 100%;
+}
+
+#hero-section video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  position: absolute;
+  top: 0;
+}
+
+#hero-name {
+  height: 15rem;
+  margin-top: 1rem;
+  /* border: 1px solid #FFD700; */
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-name p {
+  height: 3.3rem;
+  width: 10%;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  border-bottom: #FFD700 1px solid;
+  color: white;
+  font-family: 'DancingScript', sans-serif;
+}
+
+#hero-name h1 {
+  height: 10rem;
+  width:54%;
+  font-size: 10vw;
+  position: absolute;
+  left: 3rem;
+  top: 10rem;
+  font-weight: 1000;
+  color: #ffffff;
+  font-family: "Nippo", sans-serif;
+  cursor: default;
+}
+
+#hero-frontend {
+  height: 10rem;
+  width: 100%;
+  margin-top: 1rem;
+  /* border: 1px solid #FFD700; */
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-frontend h1 {
+  font-size: 8vw;
+  position: absolute;
+  right: 2rem;
+  color: white;
+  font-weight: 100;
+  font-family: "Stardom", sans-serif;
+  cursor: default;
+}
+
+#hero-backend {
+  height: 15rem;
+  margin-top: 1rem;
+  /* border: 1px solid #FFD700; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#hero-backend p {
+  font-size: 3rem;
+  font-weight: 600;
+  position: absolute;
+  right: 14rem;
+  margin-top: 0.5rem;
+  color: white;
+  font-family: 'DancingScript', sans-serif;
+  border-bottom: #FFD700 1px solid;
+}
+
+#hero-backend h1 {
+  font-size: 8vw;
+  position: absolute;
+  left: 2rem;
+  margin-top: 3rem;
+  color: white;
+  font-family: "Stardom", sans-serif;
+  font-weight: 100;
+  cursor: default;
+}
