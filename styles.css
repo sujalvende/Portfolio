@@ -28,6 +28,31 @@
   border: 2px solid white;
   border-radius: 50%;
   position: fixed;
+  z-index: 1000;
+}
+
+#rotating-element {
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0px 0px 10px #000000;
+  position: absolute;
+  top: 8rem;
+  right: 15rem;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#sv {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: hidden;
 }
 
 /* Nav Bar Section */
