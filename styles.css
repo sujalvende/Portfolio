@@ -32,11 +32,14 @@
 }
 
 #rotating-element {
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
   box-shadow: 0px 0px 10px #000000;
+  background: url("images/Tech_circle-removebg-preview.png");
+  background-size: cover;
+  border-radius: 50%;
   position: absolute;
-  top: 8rem;
+  top: 7rem;
   right: 15rem;
   perspective: 1000px;
   transform-style: preserve-3d;
