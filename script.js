@@ -92,9 +92,10 @@ t1.from("#hero-backend p",{
 
 t1.from("#hero-backend h1",{
     position: "relative",
-    left: "1rem",
-    bottom: "-20rem",
+    // left: "1rem",
+    right: "-100rem",
     duration: 0.8,
+    visibility: "hidden",
 });
 
 t1.from("#rotating-element",{

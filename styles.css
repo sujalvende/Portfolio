@@ -31,6 +31,8 @@
   z-index: 1000;
 }
 
+/* Page 1 */
+
 #rotating-element {
   height: 15rem;
   width: 15rem;
@@ -198,4 +200,62 @@
   font-family: "Stardom", sans-serif;
   font-weight: 100;
   cursor: default;
+  visibility: visible;
 }
+
+/* Page 2 */
+
+.profile-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background: url("images/Profile-background.png");
+  background-size: cover; */
+  color: white;
+}
+
+.animated-gradient {
+    background: linear-gradient(135deg, #30b3b3 0%, #494ee7 100%);
+    background-size: 180% 180%; animation: animated-gradient-wave 5s ease-in-out infinite;
+}
+
+
+@keyframes animated-gradient-wave {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+#profile-picture {
+  height: 80%;
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#picture {
+  height: 60%;
+  width: 80%;
+  background: url("images/Github_profile_picture.jpg");
+  background-size: cover;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#profile-intro {
+  height: 80%;
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
