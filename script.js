@@ -1,48 +1,70 @@
 let cursor = document.querySelector("#cursor");
+let point = document.querySelector("#point");
+
+let inbody = false;
+
+let mouseX = 0;
+let mouseY = 0;
 
 window.addEventListener("mousemove", (e) => {
-    console.log(e.clientX, e.clientY);
+    mouseX = e.clientX+4;
+    mouseY = e.clientY+4;
+    if (inbody) return;
     gsap.to(cursor,{
-        x: e.clientX-18,
-        y: e.clientY-15,
-        duration: 0.5,
+        x: e.clientX+4,
+        y: e.clientY+4,
+        duration: 0.6,
+        ease: "Power3.easeOut",
+    })
+});
+
+window.addEventListener("mousemove", (m) => {
+    gsap.to(point,{
+        x: m.clientX,
+        y: m.clientY,
+        duration: 0.1,
         ease: "Power3.easeOut",
     })
 });
 
 function borderCursor(ele){
     let position = ele.getBoundingClientRect();
-    let inbody = false;
+    
     ele.addEventListener("mouseenter", (enter)=>{
-        if (inbody) return;
+        console.log("Enter");
         inbody = true;
         gsap.to(cursor,{
-            borderRadius: "0%",
-            left: position.left,
-            top: position.top,
-            width: position.width,
+            // scale: 1.5,
+            borderRadius: 0,
+            x: position.left,
+            y: position.top,
             height: position.height,
-            duration: 0.3,
+            width: position.width,
+            transform: "translate(0%, 0%)",
+            duration: 0.5,
             ease: "Power3.easeOut",
         });
     });
 
     ele.addEventListener("mouseleave", (leave)=>{
+        console.log("Leave");
         inbody = false;
         gsap.to(cursor,{
+            // scale: 1,
             borderRadius: "50%",
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.5,
+            x: mouseX,
+            y: mouseY,
             height: "3rem",
             width: "3rem",
+            duration: 0.5,
             ease: "Power3.easeOut",
+            transform: "translate(-50%, -50%)",
         });
     });
 }
 
-let heroName = document.querySelector("#hero-name h1");
-// borderCursor(heroName);
+let navLinks = document.querySelector("#overflow-links");
+borderCursor(navLinks);
 
 
 // Animation for nav section

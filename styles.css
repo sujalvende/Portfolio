@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 /* Cursor */
@@ -28,7 +29,30 @@
   border: 2px solid white;
   border-radius: 50%;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
+  transform:  translate(-50%, -50%);
+  top: 0;
+  left: 0;
+}
+
+#point {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+}
+
+/* Overflow */
+
+#overflow-links {
+  height: 10%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 150;
 }
 
 /* Page 1 */
@@ -99,7 +123,10 @@
   text-align: center;
   align-content: center;
   border-bottom: 1px solid #FFD700;
-  cursor: pointer;
+}
+
+#nav-links a:hover {
+  font-size: 1.3rem;
 }
 
 /* Hero Section */
@@ -148,7 +175,6 @@
   font-weight: 1000;
   color: #ffffff;
   font-family: "Nippo", sans-serif;
-  cursor: default;
 }
 
 #hero-frontend {
@@ -167,7 +193,6 @@
   color: white;
   font-weight: 100;
   font-family: "Stardom", sans-serif;
-  cursor: default;
 }
 
 #hero-backend {
@@ -199,7 +224,6 @@
   color: white;
   font-family: "Stardom", sans-serif;
   font-weight: 100;
-  cursor: default;
   visibility: visible;
 }
 
@@ -249,6 +273,35 @@
   background-size: cover;
   border: 2px solid black;
   border-radius: 10px;
+}
+
+#social-media-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15%;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#social-media-links a {
+  height: 90%;
+  width: 22%;
+  border: 1px solid black;
+  border-radius: 50%;
+  align-content: center;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+#insta {
+  background-color: #e312b2;
+}
+
+#github {
+  background-color: #000000;
 }
 
 #profile-intro {
