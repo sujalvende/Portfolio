@@ -11,8 +11,8 @@ window.addEventListener("mousemove", (e) => {
     mouseY = e.clientY+4;
     if (inbody) return;
     gsap.to(cursor,{
-        x: e.clientX+4,
-        y: e.clientY+4,
+        x: mouseX,
+        y: mouseY,
         duration: 0.6,
         ease: "Power3.easeOut",
     })
@@ -36,11 +36,10 @@ function borderCursor(ele){
         gsap.to(cursor,{
             // scale: 1.5,
             borderRadius: 0,
-            x: position.left,
-            y: position.top,
-            height: position.height,
-            width: position.width,
-            transform: "translate(0%, 0%)",
+            x: position.left + position.width / 2,
+            y: position.top + position.height / 2,
+            height: position.height+10,
+            width: position.width+10,
             duration: 0.5,
             ease: "Power3.easeOut",
         });
@@ -58,7 +57,6 @@ function borderCursor(ele){
             width: "3rem",
             duration: 0.5,
             ease: "Power3.easeOut",
-            transform: "translate(-50%, -50%)",
         });
     });
 }
@@ -132,3 +130,19 @@ gsap.to("#rotating-element",{
     duration: 1.5,
     ease: "none",
 });
+
+
+// profile-intro
+
+gsap.from("#profile-intro",{
+    duration: 1,
+    scale: 0,
+    scrollTrigger: {
+        trigger: "#profile-intro",
+        scroller: "body",
+        markers: true,
+        start: "top 90%",
+        end: "bottom 60%",
+        scrub: 2,
+    }
+})
