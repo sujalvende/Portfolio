@@ -1,3 +1,11 @@
+// gsap.registerPlugin(ScrollTrigger);
+
+// ScrollTrigger.config({
+//   limitCallbacks: true,
+//   ignoreMobileResize: true
+// });
+
+
 let cursor = document.querySelector("#cursor");
 let point = document.querySelector("#point");
 
@@ -65,7 +73,11 @@ let navLinks = document.querySelector("#overflow-links");
 borderCursor(navLinks);
 
 
-// Animation for nav section
+const video = document.getElementById("bg-video");
+
+function startAnimations() {
+
+    // Animation for nav section
 
 let t1 = gsap.timeline();
 
@@ -131,6 +143,18 @@ gsap.to("#rotating-element",{
     ease: "none",
 });
 
+}
+
+if (video) {
+  video.addEventListener("canplaythrough", () => {
+    startAnimations();
+  });
+} else {
+  startAnimations(); // fallback
+}
+
+
+
 
 // profile-intro
 
@@ -156,8 +180,8 @@ gsap.to("#scroll-down h1",{
         scroller: "body",
         // markers: true,
         start: "top 0%",
-        end: "500%",
+        end: "700%",
         pin: true,
-        scrub: 1,
+        scrub: 2,
     }
 })
