@@ -101,7 +101,7 @@ t1.from("#hero-frontend h1",{
     position: "relative",
     left: "-95rem",
     duration: 0.8,
-    ease: "linner",
+    ease: "linear",
 });
 
 t1.from("#hero-backend p",{
@@ -140,9 +140,24 @@ gsap.from("#profile-intro",{
     scrollTrigger: {
         trigger: "#profile-intro",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 90%",
         end: "bottom 60%",
         scrub: 2,
+    }
+})
+
+// Scroll-down
+
+gsap.to("#scroll-down h1",{
+    transform: "translate(-40%)",
+    scrollTrigger: {
+        trigger: "#scroll-down",
+        scroller: "body",
+        // markers: true,
+        start: "top 0%",
+        end: "500%",
+        pin: true,
+        scrub: 1,
     }
 })

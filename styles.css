@@ -21,6 +21,10 @@
   cursor: none;
 }
 
+html,body {
+  overflow-x: hidden;
+}
+
 /* Cursor */
 
 #cursor {
@@ -184,20 +188,27 @@
   margin-top: 1rem;
   /* border: 1px solid #FFD700; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: flex-end;
 }
 
 #hero-frontend h1 {
   font-size: 8vw;
+  width: 90%;
   position: absolute;
-  right: 2rem;
+  right: 0rem;
   color: white;
   font-weight: 100;
   font-family: "Stardom", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
 }
 
 #hero-backend {
   height: 15rem;
+  width: 90%;
   margin-top: 1rem;
   /* border: 1px solid #FFD700; */
   display: flex;
@@ -219,6 +230,7 @@
 
 #hero-backend h1 {
   font-size: 8vw;
+  width: 100%;
   position: absolute;
   left: 2rem;
   margin-top: 3rem;
@@ -231,7 +243,7 @@
 /* Page 2 */
 
 .profile-section {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -322,7 +334,33 @@
   font-size: 1.2rem;
 }
 
-#my-work {
-  height: 200%;
+#scroll-down {
+  height: 100vh;
   width: 100%;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#scroll-down h1 {
+  font-size: 30rem;
+  white-space: nowrap;
+  transform: translate(40%);
+}
+
+.animated-scroll-section {
+    background: linear-gradient(135deg, #30b3b3 0%, lightgreen 100%);
+    background-size: 180% 180%; animation: animated-gradient-wave 5s ease-in-out infinite;
+}
+
+
+@keyframes animated-gradient-wave {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
