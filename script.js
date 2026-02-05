@@ -75,7 +75,7 @@ borderCursor(navLinks);
 
 const video = document.getElementById("bg-video");
 
-function startAnimations() {
+// function startAnimations() {
 
     // Animation for nav section
 
@@ -143,15 +143,15 @@ gsap.to("#rotating-element",{
     ease: "none",
 });
 
-}
+// }
 
-if (video) {
-  video.addEventListener("canplaythrough", () => {
-    startAnimations();
-  });
-} else {
-  startAnimations(); // fallback
-}
+// if (video) {
+//   video.addEventListener("canplaythrough", () => {
+//     startAnimations();
+//   });
+// } else {
+//   startAnimations(); // fallback
+// }
 
 
 

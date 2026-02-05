@@ -254,7 +254,7 @@ html,body {
 }
 
 .animated-gradient {
-    background: linear-gradient(135deg, #30b3b3 0%, #494ee7 100%);
+    background: linear-gradient(135deg, #0a0fb0 0%, #30b3b3 100%);
     background-size: 180% 180%; animation: animated-gradient-wave 5s ease-in-out infinite;
 }
 
@@ -363,4 +363,51 @@ html,body {
     50% {
         background-position: 100% 50%;
     }
+}
+
+#my-work {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+}
+
+#project-cards {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.animated-project-section {
+    background: linear-gradient(135deg, lightgreen 0%, #30b3b3 50%, #1d00d6 100%);
+    background-size: 180% 180%; animation: animated-gradient-wave 5s ease-in-out infinite;
+}
+
+@keyframes animated-gradient-wave {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.cards {
+  height: 75%;
+  width: 30%;
+  /* border: 2px solid black; */
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  filter: blur(0.5px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  filter: blur(0.5px);
+  position: absolute;
+  background-color: rgba(255,255,255,0.1);
 }
