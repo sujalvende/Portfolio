@@ -185,3 +185,34 @@ gsap.to("#scroll-down h1",{
         scrub: 2,
     }
 })
+
+// Project-Section
+
+let projectTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#my-work",
+        scroller: "body",
+        // markers: true,
+        start: "top 0%",
+        end: "500%",
+        scrub: 1,
+        pin: true,
+        pinSpacing: true,
+    }
+});
+
+const projectCards = gsap.utils.toArray(".cards").reverse();
+
+projectCards.forEach((card, index) => {
+    projectTimeline.to(card, {
+        x: index % 2 === 0 ? "200%" : "-200%",
+        rotation: index % 2 === 0 ? 360 : -360,
+        duration: 1,
+        opacity: 0,
+        ease: "power1.inout",
+    });
+});
+
+
+// Refresh ScrollTrigger to ensure all pins and spacing are calculated correctly
+ScrollTrigger.refresh();
